@@ -1,0 +1,17 @@
+'''Given an array nums containing n distinct numbers in the range [0, n],
+ return the only number in the range that is missing from the array.'''
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums.sort()
+        n = len(nums)
+        j = 0
+        for i in range(0,n):
+            if nums[i] != j:
+                return j
+            j = j + 1
+        return j
+        
+
+
+ 
